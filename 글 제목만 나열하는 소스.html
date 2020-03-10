@@ -1,0 +1,12 @@
+<!--Only title in Label and archive page start-->
+<b:if cond='data:blog.homepageUrl!= data:blog.url'>
+    <b:if cond='data:blog.pageType != "item"'>
+        <h3 class='post-title'><a expr:href='data:post.url'>
+                <data:post.title /></a></h3>
+        <b:else />
+        <b:include data='post' name='post' />
+    </b:if>
+    <b:else />
+    <b:include data='post' name='post' />
+</b:if>
+<!--Only title in Label and archive page End-->
